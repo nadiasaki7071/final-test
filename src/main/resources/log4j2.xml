@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="TRACE">
+    <console name="LogToConsole" target="SYSTEM OUT">
+        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </console>
+    <Loggers>
+<Root level="trace">
+    <AppenderRef ref="LogToConsole" />
+</Root>
+        <Root level="warn">
+            <AppenderRef ref="LogToConsole" />
+        </Root>
+    </Loggers>
+</configuration>
