@@ -1,35 +1,39 @@
-package GalaxyManagement;
+package Galaxy;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Galaxy {
-    private String name;
-    private Map<String, Planet> planets;
+    private String galaxyName;
+    private List<Planet> planets;
 
-    public Galaxy(String name) {
-        this.name = name;
-        this.planets = new HashMap<>();
+
+    public Galaxy(String galaxyName, List<Planet> planets) {
+        this.galaxyName = galaxyName;
+        this.planets = planets;
     }
 
-    public String getName() {
-        return name;
+    public Galaxy(String galaxyName) {
+        this.galaxyName = galaxyName;
+        this.planets = new ArrayList<>();
     }
 
-    public Collection<Planet> getPlanets() {
-        return planets.values();
+    public String getGalaxyName() {
+        return galaxyName;
     }
 
-    public void addPlanet(Planet planet) {
-        planets.put(planet.getName().toLowerCase(), planet);
+    public void setGalaxyName(String galaxyName) {
+        this.galaxyName = galaxyName;
     }
 
-    public Planet getPlanetByName(String name) {
-        return planets.get(name.toLowerCase());
+    public List<Planet> getPlanets() {
+        return planets;
     }
 
-    public boolean hasPlanet(String name) {
-        return planets.containsKey(name.toLowerCase());
+    public void setPlanets(List<Planet> planets) {
+        this.planets = planets;
     }
+
 }
