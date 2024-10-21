@@ -1,4 +1,4 @@
-package Galaxy;
+package GalaxyManagement;
 
 import java.util.ArrayList;
 import java.util.HashSet;
